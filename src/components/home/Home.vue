@@ -5,7 +5,7 @@
         <el-row>
           <el-col :span="4">
             <div class="grid-content bg-purple">
-              <img src="../../assets/1111.jpg" alt="图片无法显示QAQ" />
+              <img class="logo" src="../../assets/logo.jpeg" alt="图片无法显示QAQ" />
             </div>
             <div class="grid-content bg-purple"></div>
           </el-col>
@@ -15,7 +15,8 @@
           </el-col>
           <el-col :span="2">
             <div class="grid-content bg-purple login">
-              <a href="#" class="loginout">退出</a>
+              <!-- <a href="#" class="loginout">退出</a> -->
+              <el-button plain>退出</el-button>
             </div>
           </el-col>
         </el-row>
@@ -46,23 +47,6 @@
             <el-submenu index="2">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span>用户管理</span>
-              </template>
-              <el-menu-item-group>
-                <!-- <template slot="title">分组一</template> -->
-                <el-menu-item index="1-1">
-                  <i class="el-icon-menu"></i>
-                  <span>用户列表</span>
-                </el-menu-item>
-                <el-menu-item index="1-2">
-                  <i class="el-icon-menu"></i>
-                  <span>权限列表</span>
-                </el-menu-item>
-              </el-menu-item-group>
-            </el-submenu>
-            <el-submenu index="3">
-              <template slot="title">
-                <i class="el-icon-location"></i>
                 <span>权限管理</span>
               </template>
               <el-menu-item-group>
@@ -77,7 +61,7 @@
                 </el-menu-item>
               </el-menu-item-group>
             </el-submenu>
-            <el-submenu index="4">
+            <el-submenu index="3">
               <template slot="title">
                 <i class="el-icon-location"></i>
                 <span>商品管理</span>
@@ -98,7 +82,7 @@
                 </el-menu-item>
               </el-menu-item-group>
             </el-submenu>
-            <el-submenu index="5">
+            <el-submenu index="4">
               <template slot="title">
                 <i class="el-icon-location"></i>
                 <span>订单管理</span>
@@ -168,6 +152,12 @@ export default {
 
 }
 
+.logo {
+  margin-left: -20px;
+  width: 200px;
+  height: 60px;
+}
+
 
 .aside {
   background-color: #ffffff;
@@ -179,7 +169,9 @@ export default {
 
 }
 
-.login {}
+.login {
+  margin-right: 100px;
+}
 
 .loginout {
   text-decoration: none;
